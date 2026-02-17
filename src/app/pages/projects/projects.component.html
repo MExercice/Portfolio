@@ -1,0 +1,21 @@
+<section class="projects-page">
+    <h1 class="page-title">Mes Réalisations</h1>
+
+    <div class="projects-grid">
+        <div class="project-card" *ngFor="let project of projects" [routerLink]="['/realisations', project.id]">
+            <div class="project-img-placeholder">
+                <span class="img-label">Projet</span>
+            </div>
+            <div class="project-info">
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.shortDescription }}</p>
+                <div class="tags">
+                    <span class="tag" *ngFor="let skillId of project.linkedSkillIds">{{ skillId }}</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span class="view-link">Voir le projet →</span>
+            </div>
+        </div>
+    </div>
+</section>

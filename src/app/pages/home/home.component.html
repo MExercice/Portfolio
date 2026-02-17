@@ -1,0 +1,21 @@
+<section class="home-page" *ngIf="ownerInfo$ | async as owner">
+    <div class="hero">
+        <div class="hero-content">
+            <h1 class="greeting">Bonjour, je suis <span class="highlight">{{ owner.firstName }} {{ owner.lastName
+                    }}</span></h1>
+            <h2 class="title">{{ owner.title }}</h2>
+            <p class="description">
+                Expert passionné par l'architecture logicielle et le développement front-end moderne.
+                Bienvenue dans mon portfolio professionnel dédié à la validation de mon titre d'Expert.
+            </p>
+            <div class="cta-group">
+                <a routerLink="/realisations" class="btn btn-primary">Voir mes réalisations</a>
+                <a routerLink="/competences" class="btn btn-secondary">Mes compétences</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="circle-decoration"></div>
+            <img [src]="owner.photoUrl" [alt]="owner.firstName" class="hero-img">
+        </div>
+    </div>
+</section>

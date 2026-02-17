@@ -1,0 +1,19 @@
+<header class="sticky-header" *ngIf="ownerInfo$ | async as owner">
+  <div class="header-container">
+    <div class="identity">
+      <img [src]="owner.photoUrl" [alt]="owner.firstName" class="profile-photo">
+      <div class="name-info">
+        <span class="full-name">{{ owner.firstName }} {{ owner.lastName }}</span>
+        <span class="job-title">{{ owner.title }}</span>
+      </div>
+    </div>
+    
+    <nav class="navigation">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Accueil</a>
+      <a routerLink="/presentation" routerLinkActive="active">Présentation</a>
+      <a routerLink="/competences" routerLinkActive="active">Compétences</a>
+      <a routerLink="/realisations" routerLinkActive="active">Réalisations</a>
+      <a routerLink="/parcours" routerLinkActive="active">Parcours</a>
+    </nav>
+  </div>
+</header>

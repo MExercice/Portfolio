@@ -1,0 +1,101 @@
+@use 'variables' as *;
+
+.projects-page {
+    padding: 2rem 0;
+
+    .page-title {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        text-align: center;
+        color: $text-color;
+    }
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2.5rem;
+
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project-card {
+    @include glassmorphism;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all $transition-speed;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+        transform: translateY(-10px);
+        border-color: $primary-color;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+
+        .project-img-placeholder {
+            background: $primary-color;
+        }
+    }
+
+    .project-img-placeholder {
+        height: 200px;
+        background: $secondary-color;
+        @include flex-center;
+        transition: background $transition-speed;
+
+        .img-label {
+            font-weight: 800;
+            font-size: 1.5rem;
+            opacity: 0.3;
+            text-transform: uppercase;
+        }
+    }
+
+    .project-info {
+        padding: 1.5rem;
+        flex-grow: 1;
+
+        h3 {
+            font-size: 1.4rem;
+            margin: 0 0 0.8rem 0;
+            color: $text-color;
+        }
+
+        p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1.5rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+
+            .tag {
+                background: rgba(37, 99, 235, 0.1);
+                color: $accent-color;
+                padding: 0.3rem 0.8rem;
+                border-radius: 4px;
+                font-size: 0.8rem;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .card-footer {
+        padding: 1.2rem 1.5rem;
+        border-top: 1px solid $border-color;
+
+        .view-link {
+            font-weight: 600;
+            color: $primary-color;
+            font-size: 0.9rem;
+        }
+    }
+}

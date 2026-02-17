@@ -1,0 +1,66 @@
+<section class="detail-page" *ngIf="project">
+    <div class="back-link">
+        <a routerLink="/realisations">← Retour aux réalisations</a>
+    </div>
+
+    <header class="detail-header">
+        <h1>{{ project.title }}</h1>
+        <p class="summary">{{ project.shortDescription }}</p>
+    </header>
+
+    <div class="detail-grid">
+        <div class="main-content">
+            <section class="info-section">
+                <h2>Contexte</h2>
+                <p>{{ project.context }}</p>
+            </section>
+
+            <section class="info-section">
+                <h2>Objectifs</h2>
+                <ul>
+                    <li *ngFor="let obj of project.objectives">{{ obj }}</li>
+                </ul>
+            </section>
+
+            <section class="info-section">
+                <h2>Étapes de réalisation</h2>
+                <ol>
+                    <li *ngFor="let step of project.steps">{{ step }}</li>
+                </ol>
+            </section>
+
+            <div class="dual-section">
+                <section class="info-section">
+                    <h2>Acteurs</h2>
+                    <ul>
+                        <li *ngFor="let actor of project.actors">{{ actor }}</li>
+                    </ul>
+                </section>
+                <section class="info-section">
+                    <h2>Résultats</h2>
+                    <p>{{ project.results }}</p>
+                </section>
+            </div>
+
+            <section class="info-section critique">
+                <h2>Critique / Retour d'expérience</h2>
+                <p>{{ project.criticism }}</p>
+            </section>
+        </div>
+
+        <aside class="sidebar">
+            <div class="linked-items">
+                <h2>Compétences mobilisées</h2>
+                <div class="skill-mini-card" *ngFor="let skill of linkedSkills"
+                    [routerLink]="['/competences', skill.id]">
+                    <span class="type">{{ skill.type }}</span>
+                    <h4>{{ skill.name }}</h4>
+                    <div class="mini-progress">
+                        <div class="fill" [style.width.%]="skill.level"></div>
+                    </div>
+                    <span class="link">Détails →</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+</section>

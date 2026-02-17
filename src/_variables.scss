@@ -1,0 +1,24 @@
+// Design System Variables
+$primary-color: #2563eb;
+$secondary-color: #1e293b;
+$accent-color: #3b82f6;
+$text-color: #f8fafc;
+$bg-color: #0f172a;
+$card-bg: #1e293b;
+$border-color: #334155;
+$transition-speed: 0.3s;
+$sticky-header-height: 70px;
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin glassmorphism {
+    background: rgba(30, 41, 59, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}

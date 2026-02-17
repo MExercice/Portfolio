@@ -1,0 +1,62 @@
+<section class="detail-page" *ngIf="skill">
+    <div class="back-link">
+        <a routerLink="/competences">← Retour aux compétences</a>
+    </div>
+
+    <header class="detail-header">
+        <span class="type-badge">{{ skill.type }}</span>
+        <h1>{{ skill.name }}</h1>
+        <div class="level-indicator">
+            <span>Maîtrise : {{ skill.level }}%</span>
+            <div class="progress-bar">
+                <div class="progress" [style.width.%]="skill.level"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="detail-grid">
+        <div class="main-content">
+            <section class="info-section">
+                <h2>Définition</h2>
+                <p>{{ skill.definition }}</p>
+            </section>
+
+            <section class="info-section">
+                <h2>Éléments de preuve (Anecdotes)</h2>
+                <ul>
+                    <li *ngFor="let p of skill.proof">
+                        {{ p.content }}
+                        <a *ngIf="p.linkedProjectId" [routerLink]="['/realisations', p.linkedProjectId]"
+                            class="proof-link">
+                            (Voir la réalisation)
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <div class="dual-section">
+                <section class="info-section">
+                    <h2>Autocritique</h2>
+                    <p>{{ skill.selfCriticism }}</p>
+                </section>
+                <section class="info-section">
+                    <h2>Évolution</h2>
+                    <p>{{ skill.evolution }}</p>
+                </section>
+            </div>
+        </div>
+
+        <aside class="sidebar">
+            <div class="linked-items">
+                <h2>Réalisations liées</h2>
+                <div class="project-mini-card" *ngFor="let proj of linkedProjects"
+                    [routerLink]="['/realisations', proj.id]">
+                    <h4>{{ proj.title }}</h4>
+                    <p>{{ proj.shortDescription }}</p>
+                    <span class="link">Voir le projet →</span>
+                </div>
+                <p *ngIf="linkedProjects.length === 0">Aucune réalisation liée pour le moment.</p>
+            </div>
+        </aside>
+    </div>
+</section>

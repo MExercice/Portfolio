@@ -1,0 +1,23 @@
+@use 'variables' as *;
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $bg-color;
+  color: $text-color;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.content-container {
+  min-height: calc(100vh - 140px);
+  padding-top: 2rem;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}

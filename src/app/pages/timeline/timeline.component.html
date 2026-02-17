@@ -1,0 +1,29 @@
+<section class="timeline-page">
+    <h1 class="page-title">Mon Parcours Professionnel</h1>
+
+    <div class="timeline">
+        <div class="timeline-item" *ngFor="let exp of experiences">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">{{ exp.date }}</div>
+
+            <div class="timeline-content">
+                <div class="header-info">
+                    <div class="main-info">
+                        <h2>{{ exp.title }}</h2>
+                        <p class="company">{{ exp.company }} - {{ exp.location }}</p>
+                    </div>
+                    <div class="logo-placeholder" *ngIf="exp.logoUrl">
+                        <img [src]="exp.logoUrl" [alt]="exp.company">
+                    </div>
+                </div>
+
+                <div class="missions">
+                    <h3>Missions et Responsabilités :</h3>
+                    <ul>
+                        <li *ngFor="let mission of exp.missions">{{ mission }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
