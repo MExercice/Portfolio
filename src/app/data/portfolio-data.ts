@@ -226,7 +226,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
             ],
             results: `La transformation numérique est un succès total : l'application gère actuellement sa troisième campagne de promotion interne avec une grande stabilité. L'outil fait désormais partie du quotidien des utilisateurs. Mon rôle actuel s'inscrit dans une démarche d'amélioration continue (MCO), en concevant et déployant de nouvelles fonctionnalités directement dictées par les besoins du terrain.`,
             criticism: `Le parti pris de la sauvegarde en temps réel a été un vrai défi technique. Chaque modification d'un champ déclenchant une requête vers le serveur, cela peut générer une charge importante sur la base de données lors des pics d'utilisation en pleine campagne. Avec le recul, l'étape d'optimisation consistera à affiner ce mécanisme (via des techniques de "debounce" pour temporiser et regrouper les requêtes) afin de soulager le serveur tout en conservant cette UX fluide.`,
-            linkedSkillIds: ['PHP', 'symfony', 'mysql', 'javascript', 'COMMUNICATION', 'ANALYSE_SYNTHESE', 'gestiondeprojet', 'UX/UI']
+            linkedSkillIds: ['PHP', 'symfony', 'mysql', 'javascript', 'COMMUNICATION', 'ANALYSE_SYNTHESE', 'gestiondeprojet']
         },
         {
             id: 'GED',
@@ -251,7 +251,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
             ],
             results: `Le projet est dans une phase de pivot stratégique. La première version a parfaitement prouvé la valeur métier de l'automatisation en faisant gagner un temps précieux aux agents. Actuellement, je travaille sur la V2 du projet en collaborant avec l'éditeur pour remplacer notre solution initiale par une intégration API propre et durable.`,
             criticism: `Ce projet a été une formidable leçon d'architecture logicielle. L'utilisation d'une "rustine" technique (passage de XML dans l'URL) pour pallier l'absence d'API standard a fini par sauter. Cela m'a appris qu'un contournement temporaire ne doit jamais devenir définitif sur un système critique. Aujourd'hui, j'ai le recul nécessaire pour bloquer ce genre de dette technique et exiger les bons outils (une API REST) pour garantir la fiabilité de mon code.`,
-            linkedSkillIds: ['PHP', 'symfony', 'gestiondeprojet', 'Architecture']
+            linkedSkillIds: ['PHP', 'symfony', 'gestiondeprojet', 'ANALYSE_SYNTHESE']
         },
         {
             id: 'reservation',
