@@ -226,7 +226,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
             ],
             results: `La transformation numérique est un succès total : l'application gère actuellement sa troisième campagne de promotion interne avec une grande stabilité. L'outil fait désormais partie du quotidien des utilisateurs. Mon rôle actuel s'inscrit dans une démarche d'amélioration continue (MCO), en concevant et déployant de nouvelles fonctionnalités directement dictées par les besoins du terrain.`,
             criticism: `Le parti pris de la sauvegarde en temps réel a été un vrai défi technique. Chaque modification d'un champ déclenchant une requête vers le serveur, cela peut générer une charge importante sur la base de données lors des pics d'utilisation en pleine campagne. Avec le recul, l'étape d'optimisation consistera à affiner ce mécanisme (via des techniques de "debounce" pour temporiser et regrouper les requêtes) afin de soulager le serveur tout en conservant cette UX fluide.`,
-            linkedSkillIds: ['PHP', 'symfony', 'mysql', 'JavaScript', 'UX/UI']
+            linkedSkillIds: ['PHP', 'symfony', 'mysql', 'javascript', 'COMMUNICATION', 'ANALYSE_SYNTHESE', 'gestiondeprojet', 'UX/UI']
         },
         {
             id: 'GED',
@@ -251,7 +251,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
             ],
             results: `Le projet est dans une phase de pivot stratégique. La première version a parfaitement prouvé la valeur métier de l'automatisation en faisant gagner un temps précieux aux agents. Actuellement, je travaille sur la V2 du projet en collaborant avec l'éditeur pour remplacer notre solution initiale par une intégration API propre et durable.`,
             criticism: `Ce projet a été une formidable leçon d'architecture logicielle. L'utilisation d'une "rustine" technique (passage de XML dans l'URL) pour pallier l'absence d'API standard a fini par sauter. Cela m'a appris qu'un contournement temporaire ne doit jamais devenir définitif sur un système critique. Aujourd'hui, j'ai le recul nécessaire pour bloquer ce genre de dette technique et exiger les bons outils (une API REST) pour garantir la fiabilité de mon code.`,
-            linkedSkillIds: ['PHP', 'Symfony', 'Architecture', 'gestiondeprojet']
+            linkedSkillIds: ['PHP', 'symfony', 'gestiondeprojet', 'Architecture']
         },
         {
             id: 'reservation',
@@ -265,13 +265,9 @@ export const PORTFOLIO_DATA: PortfolioData = {
             ],
             steps: [
                 'Création de fondations solides : Mise en place d\'un serveur (le moteur de l\'application) fiable pour gérer les données, et d\'une interface utilisateur moderne permettant une navigation fluide et instantanée, sans rechargement de page.',
-
                 'Qualité et pérennité du code : Écriture d\'un code "propre" et standardisé pour qu\'il soit facilement maintenable par d\'autres développeurs à l\'avenir. J\'ai également uniformisé la façon dont l\'application gère et explique les erreurs aux utilisateurs.',
-
                 'Traduction du besoin métier en fonctionnalités : Intégration d\'un calendrier interactif complexe, mise en place de sécurités strictes (pour empêcher par exemple deux personnes de réserver la même salle au même moment) et création d\'un espace administrateur sécurisé selon le profil de chaque utilisateur.',
-
                 'Filet de sécurité (Tests automatisés) : Création de robots virtuels qui vérifient en permanence le code. À chaque modification, ils s\'assurent que les nouvelles fonctionnalités ne créent pas de nouveaux bugs sur l\'existant, garantissant ainsi une application stable.',
-
                 'Automatisation du déploiement (Usine logicielle) : Configuration d\'un système qui, à chaque sauvegarde de mon code, va automatiquement le tester, scanner les éventuelles failles de sécurité, puis préparer l\'application à être mise en ligne sans intervention humaine.'
             ],
             actors: [
@@ -279,7 +275,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
             ],
             results: `Le projet est actuellement en cours de développement intensif. L'architecture de base (authentification JWT, vue calendrier) est opérationnelle. Le focus actuel est sur la finalisation des modules de réservation et l'écran administrateur, portés par le pipeline CI/CD qui valide chaque étape.`,
             criticism: `Le défi majeur actuel réside dans la gestion de l'expérience utilisateur (UX). Bien que l'architecture soit solide, l'interface nécessite encore un travail d'intégration d'animations (API View Transitions) et de micro-interactions (Skeletons de chargement, Drag & Drop sur le calendrier) pour rendre l'outil véritablement fluide et agréable pour les agents au quotidien.`,
-            linkedSkillIds: ['Spring Boot', 'Angular', 'gestiondeprojet', 'Communication']
+            linkedSkillIds: ['spring', 'angular', 'gestiondeprojet', 'COMMUNICATION', 'CURIOSITE']
         },
         {
             id: 'recrutement',
@@ -302,7 +298,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
             ],
             results: `Pari réussi : l'application a été livrée dans les temps et est en production depuis une quinzaine de jours. Elle est aujourd'hui fonctionnelle et utilisée par les gestionnaires. J'assure actuellement son maintien en conditions opérationnelles (MCO) et déploie des correctifs au fur et à mesure des retours utilisateurs.`,
             criticism: `La course contre la montre pour respecter la date butoir a eu un coût : la dette documentaire. L'application manque actuellement de documentation technique. C'est mon chantier prioritaire du moment : rédiger une documentation complète pour pérenniser le projet. De plus, comme mentionné dans mes compétences, cette urgence de livraison m'a aussi appris à mieux verrouiller les ajouts de fonctionnalités de dernière minute juste avant une mise en prod.`,
-            linkedSkillIds: ['PHP', 'symfony', 'mysql', 'gestiondeprojet']
+            linkedSkillIds: ['PHP', 'symfony', 'mysql', 'gestiondeprojet', 'javascript', 'COMMUNICATION']
         },
         {
             id: 'gestion-conges',
@@ -325,7 +321,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
             ],
             results: `Étant donné les fréquents changements de priorité de l'entreprise, le correctif complet n'est toujours pas finalisé à ce jour. Si l'audit et une partie des optimisations ont été réalisés, les bugs de calcul de soldes résistent encore, le temps m'ayant manqué pour me plonger de façon ininterrompue dans cette architecture complexe. Je continue de démêler ces algorithmes de calcul entre deux projets prioritaires.`,
             criticism: `Cette expérience est un cas d'école sur la dette technique. Maintenir du code Legacy sans tests ni framework demande un temps et une énergie considérables, avec un risque permanent de régression. Mon constat aujourd'hui est clair : plutôt que de continuer à appliquer des correctifs sur cette base vieillissante, ma recommandation architecturale est de geler la maintenance pour transférer la totalité de cette application vers des technologies récentes, robustes et maintenables, comme Symfony.`,
-            linkedSkillIds: ['PHP', 'JavaScript', 'gestiondeprojet', 'Architecture']
+            linkedSkillIds: ['PHP', 'javascript', 'gestiondeprojet', 'ANALYSE_SYNTHESE', 'CURIOSITE', 'Architecture']
         }
     ],
     experiences: [
